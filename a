@@ -1,4 +1,14 @@
-print(playerkey)
+local servers = {
+	["Server1"] = 1,
+	["Server2"] = 2,
+	["Server3"] = 3
+}
+
+for i,v in pairs(servers) do 
+	if v == playerkey then 
+		print(i)
+	end 
+end
 
 --[[
 	This property is protected.
