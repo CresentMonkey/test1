@@ -13,20 +13,6 @@ if game.PlaceId ~= 8737602449 and game.PlaceId ~= 8943844393 then
 	return
 end
 
-local whichserver = ""
-
-local servers = {
-	["Server 1"] = 1,
-	["Server 2"] = 2,
-	["Server 3"] = 3
-}
-
-for i,v in pairs(servers) do 
-	if v == playerkey then 
-		whichserver = i 
-	end 
-end
-
 --skidded!!! ty tvk1308
 for k, v in pairs(getgc(true)) do
 	if pcall(function()
@@ -39,6 +25,20 @@ for k, v in pairs(getgc(true)) do
 			end
 		}
 	end
+end
+
+local whichserver = ""
+
+local servers = {
+	["Server 1"] = 1,
+	["Server 2"] = 2,
+	["Server 3"] = 3
+}
+
+for i,v in pairs(servers) do 
+	if v == playerkey then 
+		whichserver = i 
+	end 
 end
 
 if hookmetamethod and typeof(hookmetamethod) == 'function' then
@@ -1682,7 +1682,7 @@ Players.LocalPlayer.leaderstats.Raised.Changed:Connect(function()
 					end)
 				else
 					pcall(function()
-						oldWebhook('**' .. '[A/T]: ' .. tostring(math.floor((Players.LocalPlayer.leaderstats.Raised.Value - RaisedC) * 0.6)) .. ' | Total: ' .. tostring(Players.LocalPlayer.leaderstats.Raised.Value .. tostring(whichserver) .. '**')
+						oldWebhook(' | [A/T]: ' .. tostring(math.floor((Players.LocalPlayer.leaderstats.Raised.Value - RaisedC) * 0.6)) .. ' | Total: ' .. tostring(Players.LocalPlayer.leaderstats.Raised.Value) .. tostring(whichserver))
 					end)
 				end
 			else
@@ -1692,7 +1692,7 @@ Players.LocalPlayer.leaderstats.Raised.Changed:Connect(function()
 					end)
 				else
 					pcall(function()
-						oldWebhook('**' .. '[A/T]: ' .. tostring(math.floor((Players.LocalPlayer.leaderstats.Raised.Value - RaisedC) * 0.6)) .. ' | Total: ' .. tostring(Players.LocalPlayer.leaderstats.Raised.Value .. tostring(whichserver) .. '**')
+						oldWebhook(' | [A/T]: ' .. tostring(math.floor((Players.LocalPlayer.leaderstats.Raised.Value - RaisedC) * 0.6)) .. ' | Total: ' .. tostring(Players.LocalPlayer.leaderstats.Raised.Value) .. tostring(whichserver))
 					end)
 				end
 			end
