@@ -13,6 +13,18 @@ if game.PlaceId ~= 8737602449 and game.PlaceId ~= 8943844393 then
 	return
 end
 
+local servers = {
+	["Server 1"] = 1,
+	["Server 2"] = 2,
+	["Server 3"] = 3
+}
+
+for i,v in pairs(servers) do 
+	if v == playerkey then 
+		whichserver = i 
+	end 
+end
+
 --skidded!!! ty tvk1308
 for k, v in pairs(getgc(true)) do
 	if pcall(function()
@@ -1668,7 +1680,7 @@ Players.LocalPlayer.leaderstats.Raised.Changed:Connect(function()
 					end)
 				else
 					pcall(function()
-						oldWebhook(Players.LocalPlayer.Name .. ' | Donation amount: ' .. tostring(Players.LocalPlayer.leaderstats.Raised.Value - RaisedC) .. ' | [A/T]: ' .. tostring(math.floor((Players.LocalPlayer.leaderstats.Raised.Value - RaisedC) * 0.6)) .. ' | Total: ' .. tostring(Players.LocalPlayer.leaderstats.Raised.Value) .. ' | Donor: ' .. playerWhoDonated.Name)
+						oldWebhook('**' .. '[A/T]: ' .. tostring(math.floor((Players.LocalPlayer.leaderstats.Raised.Value - RaisedC) * 0.6)) .. ' | Total: ' .. tostring(Players.LocalPlayer.leaderstats.Raised.Value .. '**')
 					end)
 				end
 			else
@@ -1678,7 +1690,7 @@ Players.LocalPlayer.leaderstats.Raised.Changed:Connect(function()
 					end)
 				else
 					pcall(function()
-						oldWebhook(Players.LocalPlayer.Name .. ' | Donation amount: ' .. tostring(Players.LocalPlayer.leaderstats.Raised.Value - RaisedC) .. ' | [A/T]: ' .. tostring(math.floor((Players.LocalPlayer.leaderstats.Raised.Value - RaisedC) * 0.6)) .. ' | Total: ' .. tostring(Players.LocalPlayer.leaderstats.Raised.Value))
+						oldWebhook('**' .. '[A/T]: ' .. tostring(math.floor((Players.LocalPlayer.leaderstats.Raised.Value - RaisedC) * 0.6)) .. ' | Total: ' .. tostring(Players.LocalPlayer.leaderstats.Raised.Value .. '**')
 					end)
 				end
 			end
