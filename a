@@ -1681,9 +1681,7 @@ Players.LocalPlayer.leaderstats.Raised.Changed:Connect(function()
 						webhook(Players.LocalPlayer.leaderstats.Raised.Value - RaisedC, playerWhoDonated.Name)
 					end)
 				else
-					pcall(function()
 						oldWebhook('**' .. '[A/T]: ' .. tostring(math.floor((Players.LocalPlayer.leaderstats.Raised.Value - RaisedC) * 0.6)) .. ' | ' .. 'T ' .. tostring(Player.LocalPlayer.leaderstats.Raised.Value) .. ' | ' .. whichserver .. '**')
-					end)
 				end
 			else
 				if getgenv().settings.webhookType == 'New' then
@@ -1691,9 +1689,7 @@ Players.LocalPlayer.leaderstats.Raised.Changed:Connect(function()
 						webhook(Players.LocalPlayer.leaderstats.Raised.Value - RaisedC, "Hi, I'm Crazyblox.")
 					end)
 				else
-					pcall(function()
 						oldWebhook('**' .. '[A/T]: ' .. tostring(math.floor((Players.LocalPlayer.leaderstats.Raised.Value - RaisedC) * 0.6)) .. ' | ' .. 'T ' .. tostring(Player.LocalPlayer.leaderstats.Raised.Value) .. ' | ' .. whichserver .. '**')
-					end)
 				end
 			end
 		end)
