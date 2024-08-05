@@ -1682,7 +1682,7 @@ Players.LocalPlayer.leaderstats.Raised.Changed:Connect(function()
 					end)
 				else
 					pcall(function()
-						oldWebhook(' | [A/T]: ' .. tostring(math.floor((Players.LocalPlayer.leaderstats.Raised.Value - RaisedC) * 0.6)) .. whichserver)
+						oldWebhook("**" .. '[A/T]: ' .. tostring(math.floor((Players.LocalPlayer.leaderstats.Raised.Value - RaisedC) * 0.6)) .. " | ".. "T " .. tostring(Player.LocalPlayer.leaderstats.Raised.Value) .. " | " .. whichserver .. "**")
 					end)
 				end
 			else
@@ -1692,7 +1692,7 @@ Players.LocalPlayer.leaderstats.Raised.Changed:Connect(function()
 					end)
 				else
 					pcall(function()
-						oldWebhook(' | [A/T]: ' .. tostring(math.floor((Players.LocalPlayer.leaderstats.Raised.Value - RaisedC) * 0.6)) .. whichserver)
+						oldWebhook("**" .. '[A/T]: ' .. tostring(math.floor((Players.LocalPlayer.leaderstats.Raised.Value - RaisedC) * 0.6)) .. " | ".. "T " .. tostring(Player.LocalPlayer.leaderstats.Raised.Value) .. " | " .. whichserver .. "**")
 					end)
 				end
 			end
