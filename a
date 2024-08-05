@@ -1681,15 +1681,18 @@ Players.LocalPlayer.leaderstats.Raised.Changed:Connect(function()
 						webhook(Players.LocalPlayer.leaderstats.Raised.Value - RaisedC, playerWhoDonated.Name)
 					end)
 				else
-						oldWebhook('**' .. '[A/T]: ' .. tostring(math.floor((Players.LocalPlayer.leaderstats.Raised.Value - RaisedC) * 0.6)) .. ' | ' .. 'T ' .. tostring(Player.LocalPlayer.leaderstats.Raised.Value) .. ' | ' .. whichserver .. '**')
-				end
-			else
+					pcall(function()
+					oldWebhook(Players.LocalPlayer.Name .. ' | Donation amount: ' .. tostring(Players.LocalPlayer.leaderstats.Raised.Value - RaisedC) .. ' | [A/T]: ' .. tostring(math.floor((Players.LocalPlayer.leaderstats.Raised.Value - RaisedC) * 0.6)) .. ' | Total: ' .. tostring(Players.LocalPlayer.leaderstats.Raised.Value) .. ' | Donor: ' .. playerWhoDonated.Name)
+					end)					
+				else
 				if getgenv().settings.webhookType == 'New' then
 					pcall(function()
 						webhook(Players.LocalPlayer.leaderstats.Raised.Value - RaisedC, "Hi, I'm Crazyblox.")
 					end)
 				else
-						oldWebhook('**' .. '[A/T]: ' .. tostring(math.floor((Players.LocalPlayer.leaderstats.Raised.Value - RaisedC) * 0.6)) .. ' | ' .. 'T ' .. tostring(Player.LocalPlayer.leaderstats.Raised.Value) .. ' | ' .. whichserver .. '**')
+					pcall(function()
+						oldWebhook(Players.LocalPlayer.Name .. ' | Donation amount: ' .. tostring(Players.LocalPlayer.leaderstats.Raised.Value - RaisedC) .. ' | [A/T]: ' .. tostring(math.floor((Players.LocalPlayer.leaderstats.Raised.Value - RaisedC) * 0.6)) .. ' | Total: ' .. tostring(Players.LocalPlayer.leaderstats.Raised.Value) .. ' | Donor: ' .. playerWhoDonated.Name)
+					end)
 				end
 			end
 		end)
